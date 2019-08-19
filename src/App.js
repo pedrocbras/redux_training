@@ -1,15 +1,17 @@
-import React from 'react';
-import { Container, Header } from 'semantic-ui-react';
-import './App.css';
+import React, { Component } from "react";
+import { Container, Header } from "semantic-ui-react";
+import "./App.css";
 
-function App() {
-  return (
-    <>
-      <Container>
-        <Header as="h1">Hello World</Header>
-      </Container>
-    </>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+        <Container>
+          <Header as="h1">Hello World</Header>
+        </Container>
+      </>
+    );
+  }
 }
 
 export default App;
