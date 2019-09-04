@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header, Button } from "semantic-ui-react";
+import { Container, Header, Button, Input } from "semantic-ui-react";
 import "./App.css";
 import { connect } from 'react-redux'
 
@@ -8,6 +8,13 @@ const App = props => {
       <>
         <Container>
           <Header as="h1">{props.greeting}</Header>
+          <Input 
+          placeholder="type your greeting here"
+          onBlur={(event) => {
+            props.dispatch({type: 'PROPOSED_GREETING', payload: event.target.value})
+          }
+          }
+          />
           <Button
           primary
           onClick={() => {
