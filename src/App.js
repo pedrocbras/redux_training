@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <>
         <Container>
-          <Header as="h1">{this.state.greeting}</Header>
+          <Header as="h1">{this.props.greeting}</Header>
         </Container>
       </>
     );
@@ -20,7 +20,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    state: state
+    greeting: state.greeting
   }
 }
 
