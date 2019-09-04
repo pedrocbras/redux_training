@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Header } from "semantic-ui-react";
 import "./App.css";
+import { connect } from 'react-redux'
 
 class App extends Component {
   state = {
@@ -17,4 +18,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    state: state
+  }
+}
+
+export default connect(mapStateToProps)(App);
