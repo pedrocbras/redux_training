@@ -18,7 +18,7 @@ const App = props => {
           <Button
           primary
           onClick={() => {
-            props.dispatch({type: 'CHANGE_GREETING', payload: 'New Hello World from Dispatch'})
+            props.dispatch({type: 'CHANGE_GREETING'})
           }}>
             Click Me!
           </Button>
